@@ -5,3 +5,8 @@ devel_isolated/
 install_isolated/
 *~
 src/CMakeLists.txt
+.idea
+/src/cartographer/cmake-build-release/
+/src/cartographer/scripts/protobuf/
+/src/cartographer/scripts/ceres-solver/
+/src/cartographer/scripts/abseil-cpp/

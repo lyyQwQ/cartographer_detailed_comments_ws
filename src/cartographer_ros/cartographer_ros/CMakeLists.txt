@@ -70,6 +70,8 @@ include_directories(
   ${urdfdom_headers_INCLUDE_DIRS}
 )
 
+include_directories(../../../install_isolated/include)
+
 # Override Catkin's GTest configuration to use GMock.
 set(GTEST_FOUND TRUE)
 set(GTEST_INCLUDE_DIRS ${GMOCK_INCLUDE_DIRS})

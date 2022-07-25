@@ -53,7 +53,7 @@ MAP_BUILDER.use_trajectory_builder_2d = true
 TRAJECTORY_BUILDER_2D.use_imu_data = true
 TRAJECTORY_BUILDER_2D.min_range = 0.3
 TRAJECTORY_BUILDER_2D.max_range = 100.
-TRAJECTORY_BUILDER_2D.min_z = 0.2
+TRAJECTORY_BUILDER_2D.min_z = 0.2           -- Z轴高度，避免激光雷达打在地面上的数据也被记作墙壁
 --TRAJECTORY_BUILDER_2D.max_z = 1.4
 --TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.02
 

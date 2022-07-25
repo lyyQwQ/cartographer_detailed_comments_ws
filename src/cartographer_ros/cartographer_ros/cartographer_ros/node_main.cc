@@ -33,6 +33,10 @@
 DEFINE_bool(collect_metrics, false,
             "Activates the collection of runtime metrics. If activated, the "
             "metrics can be accessed via a ROS service.");
+// 该参数的val是从launch文件中传入的
+// 在launch文件传入时，需要在name前加短横线，表示为命令行参数
+// 该参数表示配置文件目录
+// -- lyyqaq 2022.7.22 9:49
 DEFINE_string(configuration_directory, "",
               "First directory in which configuration files are searched, "
               "second is always the Cartographer installation to allow "
@@ -95,6 +99,8 @@ void Run() {
     node.StartTrajectoryWithDefaultTopics(trajectory_options);
   }
 
+  // 这东西相当于一个while(true)，根据查阅的资料，它会不断地遍历执行Callback队列中可用的回调
+  // -- lyyqaq 2022.7.22 14:46
   ::ros::spin();
 
   // 结束所有处于活动状态的轨迹
